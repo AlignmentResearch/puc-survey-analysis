@@ -1,0 +1,15 @@
+# Identity / PII — never commit
+PUC Risk Estimation (Responses).xlsx
+participant_map.csv
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Scratch figure exports
+_*.png
+
+# OS
+.DS_Store
