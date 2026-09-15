@@ -53,7 +53,7 @@ def main() -> None:
     anon = df.copy()
     # Flag data-quality corrections by alias instead of by name (one respondent
     # answered the Q5 ranking on a reversed scale; the notebook flips it).
-    anon["q5_reversed"] = anon["Name"].str.contains("Rick", na=False).values
+    anon["q5_reversed"] = [a == "P3" for a in aliases]
     anon["Name"] = aliases
     anon = anon.drop(columns=["Email"])
     anon.to_csv(ANON_CSV, index=False)
